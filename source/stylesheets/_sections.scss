@@ -1,0 +1,85 @@
+#prices {
+  
+  margin-top: 15px;
+  
+}
+
+.well {
+  
+  border: 1px solid #efefef;
+  
+}
+
+#main {
+  
+
+  
+}
+
+/* Selling Points Section */
+
+#selling-points {
+  
+  margin-top: 25px;
+  text-align: center;
+  
+  h3, h4 {
+  
+    color: #17479E;
+    font-size: 31px;
+    font-weight: 700;
+  
+  }
+
+  .well {
+  
+    min-height: 300px;
+      
+      p {
+        
+          font-size: 19px;
+        
+        }
+   
+  
+  }
+  
+  .panel-body {
+    
+    text-align: left;
+    
+    p {
+      
+      font-size: 18px;
+    }
+    
+    h4 {
+      
+      font-size: 22px;
+      color: #17479E;
+    }
+    
+    ol, ul {
+      
+      font-size: 18px;
+
+    }
+    
+    span {
+      
+      color: #EF6C00;
+    }
+    
+  }
+  
+  @media screen and (max-width: 700px){
+      
+      .well {
+        
+        min-height: auto;
+        
+      }
+      
+      }
+  
+}
