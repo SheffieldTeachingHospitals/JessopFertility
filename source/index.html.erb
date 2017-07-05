@@ -1,36 +1,74 @@
 ---
-title: Sheffield Vision Centre
+title: Jessop Fertility - Bringing Hope to Life
 ---
 <div id="main" role="main">
+  
+<section class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <section class="block block-with-image">
+          <div class="row"> 
+            <div class="col-md-7">
+              <%= image_tag "young-family-blowing-bubbles-in-a-park-in-autumn-picture-id135087111.jpg", width: "100%", alt: 'Laser Eye Surgery from just £30 per eye per month with zero percent APR Available' %>
+            </div>
 
-  <section id="banner">
+            <div class="col-md-5">
+              <div class="jumbotron-inner block-with-image-inner">
+                <h1>Bringing Hope to Life</h1>
+                <p class="lead">South Yorkshire's premier fertility treatment centre</p>
+                <p>
+                  <%= link_to "Call now", "/index.html#", class: "btn btn-success" %>
+                  <%= link_to "Learn more", "/index.html#", class: "btn btn-link" %>
+                </p>
+                
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+  <section class="under-jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-sm-8">
-          <%= image_tag "vision-website-two.jpg", width: "100%", alt: "Freedom from glasses or contact lenses" %>
-        </div>
-
-        <div class="col-md-4 col-sm-4">
-          <div class="well">
-            <h1 class="h1-cta">Laser and Refractive Eye Survey</h1>
-            <p>Call 0114 2711564 now to book a free no obligation consultation</p>
-            <a role="button" href="tel:01142711564" class="btn btn-danger btn-block hidden-xs" title="Call to book an appointment now">Call now</a>
-          </div>
-
-          <blockquote id="pro-quote" class="hidden-xs">
-            "Having Lasik has made such a difference to my day to day life. Having full vision again is priceless"
-            <footer>Catherine, Sheffield</footer>
-          </blockquote>
-        </div>
-
-      </div>
-      
-      <div class="row">
+        
         <div class="col-md-12">
-          <h2 class="h2-cta hidden-xs">Call 0114 271 1564 now to book a free no obligation consultation</h2>
+          <h2 class="subtle">Why families choose us</h2>
         </div>
+        
+        <div class="col-md-4">
+          
+          <div class="block block-text-center">
+            <%= image_tag lorem.image('500x300'), width: "100%", alt: "" %>
+            <h3>Good success rates</h3>
+            <p>For the first 3 months of 2017, just under 50% of frozen/thawed embryos resulted in a pregnancy.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          
+          <div class="block block-text-center">
+            <%= image_tag lorem.image('500x300'), width: "100%", alt: "" %>
+            <h3>World-class care</h3>
+            <p>We have a wide range of cutting-edge treatments to ensure you conceive a healthy child</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          
+          <div class="block block-text-center">
+            <%= image_tag lorem.image('500x300'), width: "100%", alt: "" %>
+            <h3>No hidden extras</h3>
+            <p>Unlike other fertility centres, we offer a simple, transparent fixed price</p>
+          </div>
+        </div>
+        
       </div>
-      
     </div>
   </section>
 

@@ -1,33 +1,31 @@
-// Paper 3.3.1
-// Variables
-// --------------------------------------------------
-
-
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%); // #222
-$gray-dark:              #212121;
-$gray:                   #16181b;
+$gray-dark:              #231f20;
+$gray:                   #231f20;
 $gray-light:             #bbb;
 $gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
-$brand-primary:         #006DB8;
-$brand-success:         #4CAF50;
-$brand-info:            #01579B;
-$brand-warning:         #EF6C00;
-$brand-danger:          #e51c23;
-$brand-grey:            #90A4AE;
-
+$brand-primary:         #005EB8;
+$brand-secondary:       #c35d8d;
+$brand-success:         #009688;
+$brand-info:            #105190;
+$brand-warning:         #ED8B00;
+$brand-danger:          #ca0e00;
+$brand-grey:            #f5f2e7;
+$brand-grey-dark:       #425563;
+$brand-grey-mid:        #768692;
+$brand-grey-light:      #d6dfe6;
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #F9F9F9;
+$body-bg:               #FFFFFF;
 //** Global text color on `<body>`.
 $text-color:            $gray;
 
@@ -49,7 +47,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          16px;
+$font-size-base:          18px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
@@ -61,15 +59,15 @@ $font-size-h5:            20px;
 $font-size-h6:            18px;
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.846; // 20/14
+$line-height-base:        1.646; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit;
-$headings-font-weight:    400;
+$headings-font-weight:    700;
 $headings-line-height:    1.1;
-$headings-color:          #444;
+$headings-color:          $gray;
 
 
 //== Iconography
@@ -103,9 +101,9 @@ $padding-xs-horizontal:     5px;
 $line-height-large:         1.33;
 $line-height-small:         1.5;
 
-$border-radius-base:        3px;
-$border-radius-large:       3px;
-$border-radius-small:       3px;
+$border-radius-base:        5px;
+$border-radius-large:       5px;
+$border-radius-small:       5px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff;
@@ -130,9 +128,9 @@ $table-condensed-cell-padding:  5px;
 //** Default background color used for all tables.
 $table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9;
+$table-bg-accent:               #E8EDEE;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                #f5f5f5;
+$table-bg-hover:                #E8EDEE;
 $table-bg-active:               $table-bg-hover;
 
 //** Border color for table and cell borders.
@@ -161,7 +159,7 @@ $btn-info-color:                 #fff;
 $btn-info-bg:                    $brand-info;
 $btn-info-border:                transparent;
 
-$btn-warning-color:              #fff;
+$btn-warning-color:              $gray;
 $btn-warning-bg:                 $brand-warning;
 $btn-warning-border:             transparent;
 
@@ -261,8 +259,8 @@ $dropdown-caret-color:           $gray-light;
 //
 // Note: These variables are not generated into the Customizer.
 
-$zindex-navbar:            1000;
-$zindex-dropdown:          1000;
+$zindex-navbar:            1001;
+$zindex-dropdown:          1002;
 $zindex-popover:           1060;
 $zindex-tooltip:           1070;
 $zindex-navbar-fixed:      1030;
@@ -338,7 +336,7 @@ $container-desktop:            (940px + $grid-gutter-width);
 $container-md:                 $container-desktop;
 
 // Large screen / wide desktop
-$container-large-desktop:      (940px + $grid-gutter-width);
+$container-large-desktop:      (970px + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop;
 
@@ -348,21 +346,21 @@ $container-lg:                 $container-large-desktop;
 //##
 
 // Basics of a navbar
-$navbar-height:                    64px;
+$navbar-height:                    50px;
 $navbar-margin-bottom:             $line-height-computed;
-$navbar-border-radius:             $border-radius-base;
+$navbar-border-radius:             0;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             $gray-light;
-$navbar-default-bg:                #fff;
+$navbar-default-bg:                $brand-grey;
 $navbar-default-border:            transparent;
 
 // Navbar links
 $navbar-default-link-color:                $gray;
 $navbar-default-link-hover-color:          $gray-dark;
-$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-hover-bg:             darken($navbar-default-bg, 6.5%);
 $navbar-default-link-active-color:         $gray-dark;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
 $navbar-default-link-disabled-color:       #ccc;
@@ -382,13 +380,13 @@ $navbar-default-toggle-border-color:       transparent;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light;
-$navbar-inverse-bg:                         $brand-primary;
+$navbar-inverse-bg:                         darken($brand-secondary, 5%);
 $navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;
 $navbar-inverse-link-hover-color:           #fff;
-$navbar-inverse-link-hover-bg:              transparent;
+$navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 10%);
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%);
 $navbar-inverse-link-disabled-color:        #444;
@@ -401,16 +399,15 @@ $navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle\
 $navbar-inverse-toggle-hover-bg:            transparent;
-$navbar-inverse-toggle-icon-bar-bg:         $gray-dark;
+$navbar-inverse-toggle-icon-bar-bg:         #FFF;
 $navbar-inverse-toggle-border-color:        transparent;
-
 
 //== Navs
 //
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          10px 15px;
+$nav-link-padding:                          8px 15px;
 $nav-link-hover-bg:                         $gray-lighter;
 
 $nav-disabled-link-color:                   $gray-light;
@@ -477,9 +474,9 @@ $pager-disabled-color:                 $pagination-disabled-color;
 
 $jumbotron-padding:              30px;
 $jumbotron-color:                inherit;
-$jumbotron-bg:                   #f9f9f9;
-$jumbotron-heading-color:        $headings-color;
-$jumbotron-font-size:            ceil(($font-size-base * 1.5));
+$jumbotron-bg:                   white;
+$jumbotron-heading-color:        inherit;
+$jumbotron-font-size:            ceil(($font-size-base * 1.1));
 
 
 //== Form states and alerts
@@ -488,19 +485,19 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5));
 
 $state-success-text:             $brand-success;
 $state-success-bg:               #dff0d8;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
+$state-success-border:           darken(adjust-hue($brand-success, -10), 5%);
 
-$state-info-text:                $brand-info;
-$state-info-bg:                  #e1bee7;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
+$state-info-text:                $gray;
+$state-info-bg:                  #bfecfb;
+$state-info-border:              $brand-primary;
 
 $state-warning-text:             $brand-warning;
-$state-warning-bg:               #ffe0b2;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
+$state-warning-bg:               #fff7ac;
+$state-warning-border:           #a7a275;
 
 $state-danger-text:              $brand-danger;
-$state-danger-bg:                #f9bdbb;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
+$state-danger-bg:                $brand-danger;
+$state-danger-border:            darken( $brand-danger, 10% );
 
 
 //== Tooltips
@@ -623,11 +620,11 @@ $alert-info-text:             $state-info-text;
 $alert-info-border:           $state-info-border;
 
 $alert-warning-bg:            $state-warning-bg;
-$alert-warning-text:          $state-warning-text;
+$alert-warning-text:          $gray;
 $alert-warning-border:        $state-warning-border;
 
 $alert-danger-bg:             $state-danger-bg;
-$alert-danger-text:           $state-danger-text;
+$alert-danger-text:           #FFF;
 $alert-danger-border:         $state-danger-border;
 
 
@@ -718,11 +715,11 @@ $panel-info-text:             $state-info-text;
 $panel-info-border:           $state-info-border;
 $panel-info-heading-bg:       $state-info-bg;
 
-$panel-warning-text:          $state-warning-text;
+$panel-warning-text:          $gray;
 $panel-warning-border:        $state-warning-border;
 $panel-warning-heading-bg:    $state-warning-bg;
 
-$panel-danger-text:           $state-danger-text;
+$panel-danger-text:           #FFF;
 $panel-danger-border:         $state-danger-border;
 $panel-danger-heading-bg:     $state-danger-bg;
 
@@ -750,7 +747,7 @@ $thumbnail-caption-padding:   9px;
 //
 //##
 
-$well-bg:                     #ffffff;
+$well-bg:                     $brand-grey;
 $well-border:                 transparent;
 
 
@@ -778,15 +775,15 @@ $badge-border-radius:         10px;
 //##
 
 $breadcrumb-padding-vertical:   8px;
-$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-padding-horizontal: 0;
 //** Breadcrumb background color
 $breadcrumb-bg:                 $body-bg;
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray-light;
+$breadcrumb-active-color:       $brand-grey-mid;
 //** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "/";
+$breadcrumb-separator:          ">";
 
 
 //== Carousel
