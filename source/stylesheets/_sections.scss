@@ -26,12 +26,12 @@
 
 #selling-points {
   
-  margin-top: 25px;
+  margin-top: -4em;
   text-align: center;
   
   h3, h4 {
   
-    color: #17479E;
+    color: $brand-secondary;
     font-size: 31px;
     font-weight: 700;
   
@@ -62,7 +62,7 @@
     h4 {
       
       font-size: 22px;
-      color: #17479E;
+      color: $brand-secondary;
     }
     
     ol, ul {
@@ -73,8 +73,32 @@
     
     span {
       
-      color: #EF6C00;
+      color: $brand-success;
     }
+    
+    // FAQS
+
+  .FAQs {
+
+    .faq {
+
+      margin-bottom: 0.5em;
+    }
+
+    .faq-title {
+
+      text-align: center;
+      font-size: 22px;
+
+    }
+
+    .faq-body {
+
+      text-align: justify;
+      padding: 1em;
+
+    }
+  }
     
   }
   

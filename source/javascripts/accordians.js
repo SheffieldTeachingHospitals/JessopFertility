@@ -28,6 +28,12 @@ jQuery("#buttonHeadingFive").click(function() {
     }, 500);
 });
 
+jQuery("#buttonHeadingSix").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#headingSix").offset().top
+    }, 500);
+});
+
 // Ensure when you click on an accordian to goes to the newly opened tab
 jQuery(function () {
     jQuery('#accordion').on('shown.bs.collapse', function (e) {

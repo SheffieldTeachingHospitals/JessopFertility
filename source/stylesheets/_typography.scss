@@ -45,6 +45,7 @@ blockquote footer, blockquote small, blockquote .small {
 
 h2.subtle {
 
+  text-align: center;
   font-size: 25px;
   color: #a1a2a2;
   margin: 1em 0;
@@ -53,6 +54,7 @@ h2.subtle {
 
 h3.subtle {
 
+  text-align: center;
   font-size: 20px;
   color: #a1a2a2;
   margin: 1em 0;
@@ -61,8 +63,29 @@ h3.subtle {
 
 h4.subtle {
 
+  text-align: center;
   font-size: 18px;
   color: #a1a2a2;
   margin: 1em 0;
 
+}
+
+// Step indicators in the H4 Area. Changes from side to down arrow on mobile
+
+.glyphicon-fertility-progress {
+  
+  float: right;
+  
+}
+
+.glyphicon-fertility-progress:before {
+  
+  content: "\e258";
+  
+  @media screen and (max-width: $screen-sm){
+  
+  content: "\e259";
+  
+  }
+  
 }

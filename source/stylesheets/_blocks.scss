@@ -35,11 +35,43 @@
     font-size: 18px;
   }
   
+  .cta {
+    
+    font-size: 50px;
+    color: $brand-secondary;
+    
+  }
+  
 }
 
 .block-primary {
   
   background-color: $brand-primary;
+  color: #FFF;
+  
+  h2, h3, h4, h5 {
+    
+    color: $btn-primary-color;
+  }
+  
+  a {
+    
+    color: $btn-primary-color;
+    text-decoration: underline;
+    
+    &:hover {
+      
+      color: darken( $btn-primary-color, 15% );
+      
+    }
+  }
+  
+  
+}
+
+.block-secondary {
+  
+  background-color: $brand-secondary;
   color: #FFF;
   
   h2, h3, h4, h5 {
